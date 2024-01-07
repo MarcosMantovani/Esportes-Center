@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esportes Center</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <style>
+        body, #inicio, #destaque {
+            background-color: #191919;
+        }
+
+        #produtos-bg, #produtos {
+            background-color: #292929;
+            padding-top: 2%;
+        }
+
+        #contato-bg, #contato {
+            background-color: #191919;
+        }
+
+        #contato-bg {
+            border-top: 5px solid #111111;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #fff;
+        }
+
+        .nav-link{
+            text-align: center;
+        }
+
+        section {
+            background-color: #fff;
+            padding-bottom: 10vh;
+        }
+
+        section img {
+            max-width: 100%;
+        }
+
+        #grid-item {
+            padding: 2%;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #111111;
+            border-bottom: 3px solid #111111;
+            z-index: 3;
+            color: #fff;
+        }
+
+        .carousel-item img {
+            height: 60vh;
+            object-fit: cover;
+            border-bottom: 5px solid #111111;
+        }
+
+        .carousel-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        h2 {
+            color: #C3C3C3;
+        }
+
+        .card {
+            background-color: transparent;
+            color: #212529;
+            border: 1px solid #17CB49;
+            height: 70vh;
+        }
+
+        #produtos .card {
+            height: 58vh;
+        }
+
+        .card img {
+            border: 1px solid #17CB49;
+            border-radius: 4px;
+            height: 43vh;
+            object-fit: cover;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .card-title {
+            color: #17CB49;
+            font-size: 2vh;
+            height: 4.2vh;
+        }
+
+        .card-text {
+            font-size: 1.9vh;
+            flex-grow: 1;
+        }
+
+        .card-text, .form-label, .form-check-label {
+            color: #C3C3C3;
+        }
+
+        .card-footer {
+            background-color: transparent;
+            color: #495057;
+            font-size: smaller;
+        }
+
+        .card a {
+            background-color: transparent;
+            color: #C3C3C3;
+            border-color:#00ff48;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 4vh;
+        }
+
+        .card a:hover,
+        .card a:focus {
+            background-color: #17CB49;
+            border-color:#00ff48;
+            color: #fff;
+        } 
+
+        #contato {
+            padding: 10% 0;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #17CB49;
+            background-color: #1d1d1d;
+        }
+
+        /* Estilo personalizado para o botão switch */
+        .form-switch .form-check-input {
+            background-color: #fff;
+            border-color: #17CB49;
+        }
+
+        .form-check-input:checked, .form-check-label::before {
+            background-color: #17CB49;
+            border-color: #17CB49;
+        }
+
+        .btn-success {
+            background-color: transparent;
+            border-color: #218838;
+            color: #fff;
+        }
+
+        .btn-success:hover,
+        .btn-success:focus {
+            background-color: #218838;
+            border-color: #1e7e34;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>Esportes Center</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#destaque">Destaques</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#produtos">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <section id="inicio">
+            <div id="carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div data-bs-interval="3000" class="carousel-item active">
+                        <img class="d-block w-100" src="https://ogimg.infoglobo.com.br/in/23660199-f6b-0dd/FT1086A/82628325_TOPSHOTManchester-Citys-Spanish-manager-Pep-Guardiola-C-lifts-the-Premier-League-tr.jpg">
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img class="d-block w-100" src="https://media.istockphoto.com/id/959685848/pt/foto/the-stadium.jpg?s=612x612&w=0&k=20&c=8i4T6G6qQcFa1LcY4p6CU8ebKV2SAV6ywtAnV3dV8l0=">
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img class="d-block w-100" src="https://img.r7.com/images/2016/04/18/88v8qz780q_575tm5zbkh_file">
+                    </div>
+                </div>
+                <button data-bs-target="#carousel" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button data-bs-target="#carousel" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <section id="destaque">
+                <h2>Destaques</h2>
+                <div class="row">
+                    <div id="grid-item" class="col-lg-4 col-md-6 col-sm-12 g-0">
+                        <article class="card">
+                            <img src="https://images.tcdn.com.br/img/img_prod/638286/camisa_manchester_city_2024_uniforme_titular_dry_cell_9525_1_09f0816aca1be57cb8d9e6d6dd6a06a4.jpeg">
+                            <div class="card-body">
+                                <h4 class="card-title">Uniforme Manchester City</h4>
+                                <p class="card-text">
+                                    Utilize o mais novo uniforme do atual campeão da Champions League com qualidade de ponta.
+                                </p>
+                                <a href="#" class="btn btn-primary">Compre aqui</a>
+                            </div>
+                            <footer class="card-footer">
+                                1° em mais vendidas
+                            </footer>
+                        </article>
+                    </div>
+                    <div id="grid-item" class="col-lg-4 col-md-6 col-sm-12 g-0">
+                        <article class="card">
+                            <img src="https://d2ne65t3epzl8v.cloudfront.net/Custom/Content/Products/10/54/1054361_bola-nike-futebol-campo-csf-libertadores-academy-s-17114_l2_638102556768077063.jpg">
+                            <div class="card-body">
+                                <h4 class="card-title">Nike CSF Academy</h4>
+                                <p class="card-text">
+                                    A bola utilizada na Conmebol Libertadores 2023.
+                                </p>
+                                <a href="#" class="btn btn-primary">Compre aqui</a>
+                            </div>
+                            <footer class="card-footer">
+                                A bola perfeita para sua partida!
+                            </footer>
+                        </article>
+                    </div>
+                    <div id="grid-item" class="col-lg-4 col-md-6 col-sm-12 g-0">
+                        <article class="card">
+                            <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/151ff56f034e433bb922873362829042_9366/CHUTEIRA_X_CRAZYFAST.1_FG_Branco_HQ4516_HM1.jpg">
+                            <div class="card-body">
+                                <h4 class="card-title">Chuteira X Crazyfast.1 FG</h4>
+                                <p class="card-text">
+                                    Desenvolvida com tecnologia de ponta, oferece leveza, resistência e melhor desempenho.
+                                </p>
+                                <a href="#" class="btn btn-primary">Compre aqui</a>
+                            </div>
+                            <footer class="card-footer">
+                                Para os jogadores de futebol modernos
+                            </footer>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="produtos-bg" data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <div class="container">
+            <section id="produtos">
+                <h2>Uniformes</h2>
+                <div class="row">
+                    <div id="grid-item" class="col-lg-4 col-md-6 col-sm-12 g-0">
+                        <article class="card">
+                            <img src="https://images.tcdn.com.br/img/img_prod/498725/juventus_camisa_masculina_2024_uniforme_titular_jogador_14765_1_e3386db5a209e227cf4453490b82baff.jpeg">
+                            <div class="card-body">
+                                <h4 class="card-title">Uniforme 1 Juventus 2024</h4>
+                                <a href="#" class="btn btn-primary">Compre aqui</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div id="grid-item" class="col-lg-4 col-md-6 col-sm-12 g-0">
+                        <article class="card">
+                            <img src="https://images.tcdn.com.br/img/img_prod/498725/real_madrid_camisa_masculina_2024_uniforme_titular_jogador_15177_1_52e67c2d57c7c848d8d1dcea715e0f91.jpg">
+                            <div class="card-body">
+                                <h4 class="card-title">Uniforme 1 Real Madrid 2024</h4>
+                                <a href="#" class="btn btn-primary">Compre aqui</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div id="grid-item" class="col-lg-4 col-md-6 col-sm-12 g-0">
+                        <article class="card">
+                            <img src="https://www.futebolreligiao.com.br/image/cache/catalog/barcelona/camisa-ii-barcelona-2023-2024-away-900x900.webp?1688595021">
+                            <div class="card-body">
+                                <h4 class="card-title">Uniforme 2 Barcelona 2024</h4>
+                                <a href="#" class="btn btn-primary">Compre aqui</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div id="grid-item" class="col-lg-4 col-md-6 col-sm-12 g-0">
+                        <article class="card">
+                            <img src="https://imgcentauro-a.akamaihd.net/1366x1366/M0ZAEW06.jpg">
+                            <div class="card-body">
+                                <h4 class="card-title">Uniforme 1 Man United 2024</h4>
+                                <a href="#" class="btn btn-primary">Compre aqui</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div id="grid-item" class="col-lg-4 col-md-6 col-sm-12 g-0">
+                        <article class="card">
+                            <img src="https://cdn.awsli.com.br/600x1000/1890/1890260/produto/213224753/camisa-branca-do-vasco-da-gama-2023-2024-kappa-4-u0gj60xdyi.jpg">
+                            <div class="card-body">
+                                <h4 class="card-title">Uniforme 2 Vasco 2023</h4>
+                                <a href="#" class="btn btn-primary">Compre aqui</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div id="grid-item" class="col-lg-4 col-md-6 col-sm-12 g-0">
+                        <article class="card">
+                            <img src="https://cdn.fifakitcreator.com/kits/2022/02/14/62099abb4ea25.jpg">
+                            <div class="card-body">
+                                <h4 class="card-title">Uniforme 1 At Madrid 2024</h4>
+                                <a href="#" class="btn btn-primary">Compre aqui</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="contato-bg" data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <div class="container">
+            <section id="contato">
+                <div class="row">
+                    <div class="col">
+                        <h2>Entre em contato</h2>
+                        <form>
+                            <label class="form-label" for="nome">Seu nome:</label>
+                            <input class="form-control" type="text" id="nome" required>
+                            <label for="email" class="form-label">Seu e-mail</label>
+                            <input id="email" type="email" class="form-control" required>
+                            <label for="mensagem" class="form-label">Sua mensagem:</label>
+                            <textarea id="mensagem" class="form-control"></textarea>
+                            <div class="form-check form-switch">
+                                <label class="form-check-label" for="aceito-termos">Li e concordo com os termos do site</label>
+                                <input class="form-check-input" id="aceito-termos" type="checkbox">
+                            </div>
+                            <button class="btn btn-success">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
